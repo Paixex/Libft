@@ -6,15 +6,15 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:15:55 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/24 16:16:44 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/10/25 22:28:08 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int k)
+int	ft_isascii(int k)
 {
-    return(k >= '00' && k <= '127')
-        return (1);
-    return (0);
+	if (k >= '00' && k <= '127')
+		return (1);
+	return (0);
 }

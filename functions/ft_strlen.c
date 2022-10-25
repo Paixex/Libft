@@ -6,20 +6,20 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:15:47 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/24 16:15:48 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/10/25 23:00:57 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h>"
 
-size_t ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-    int k;
+	int	k;
 
-    k = 0;
-    while (str(k) != '\0')
-    {
-        k++;    
-    }
-    return(k)
+	k = 0;
+	while (str(k) != '\0')
+	{
+		k++;
+	}
+	return (k);
 }
