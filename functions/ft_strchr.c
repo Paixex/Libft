@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 12:35:45 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/25 17:34:33 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/10/25 13:01:40 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/10/25 17:32:00 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int k)
+char    *ft_strchr(const char *s, int c)
 {
-    if (k >= 'A' && k <= 'Z')
-        k += 32;
-    return (k);
+    int k;
+    
+    k = 0;
+    if (!s)
+    {
+        return (NULL);
+    }
+    while (s[k])
+    {
+        if (s[k] ==  (char *)c)
+        {
+            return ((char *)(c + k));
+        }
+        k++;
+    }
+    if (s[k] == (char)c)
+    {
+        return ((char *)(s + k));
+    }
+	return (NULL);
 }
