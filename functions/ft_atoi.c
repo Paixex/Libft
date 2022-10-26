@@ -1,37 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:01:40 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 17:05:51 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/10/26 16:10:55 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/10/26 16:11:09 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	k;
-
-	k = 0;
-	if (!s)
-	{
-		return (NULL);
-	}
-	while (s[k])
-	{
-		if (s[k] == (char *)c)
-		{
-			return ((char *)(c + k));
-		}
-		k++;
-	}
-	if (s[k] == (char)c)
-	{
-		return ((char *)(s + k));
-	}
-	return (NULL);
-}

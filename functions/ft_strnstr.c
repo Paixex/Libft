@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:01:40 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 17:05:51 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/10/26 12:41:18 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/10/26 17:28:00 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	k;
+	int		k;
+	size_t	little_len;
 
 	k = 0;
-	if (!s)
-	{
+	if (*big == NULL || *little == NULL)
 		return (NULL);
-	}
-	while (s[k])
+	/*if (0 == (needle_len = strnlen(needle, len)))
+                return (char *)haystack;*/
+	while (k <= (int)(len - little_len))
 	{
-		if (s[k] == (char *)c)
-		{
-			return ((char *)(c + k));
-		}
+		if (big[0] == little[0] && (0 == ft_strncmp(big, little, little_len)))
+			return ((char *)big);
 		k++;
+		big++;
 	}
-	if (s[k] == (char)c)
-	{
-		return ((char *)(s + k));
-	}
-	return (NULL);
 }

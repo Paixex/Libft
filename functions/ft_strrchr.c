@@ -6,45 +6,33 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:17:17 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/25 23:05:57 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:08:06 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*strrchr(char *s, int c)
 {
 	int	slen;
-	int	k;
 
 	slen = ft_strlen(s);
-
-	k = 0;
 	if (!s)
 	{
 		return (NULL);
 	}
-	while (s[k]) //usar slen em vez de k?
+	while (s[slen])
 	{
-		if (s[k] == (char *)c)
+		if (s[slen] == (char *)c)
 		{
 			return ((char *)(c + k));
 		}
-		k--;
+		slen--;
 	}
-	if (s[k] == (char)c)
+	if (s[slen] == (char)c)
 	{
 		return ((char *)(s + k));
 	}
 	return (NULL);
 }
-
-	/*int	k;
-
-	k = 0;
-	while (str(k) != '\0')
-	{
-		k++;
-	}
-	return (k);*/
-

@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:01:40 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 17:05:51 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/10/26 16:52:16 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/10/26 17:23:00 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	int	k;
+	char	*c;
+	size_t	k;
 
+	*c = s;
 	k = 0;
-	if (!s)
+	while (k < n)
 	{
-		return (NULL);
-	}
-	while (s[k])
-	{
-		if (s[k] == (char *)c)
-		{
-			return ((char *)(c + k));
-		}
+		c[k] = '\0';
 		k++;
 	}
-	if (s[k] == (char)c)
-	{
-		return ((char *)(s + k));
-	}
-	return (NULL);
 }
