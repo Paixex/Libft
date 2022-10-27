@@ -6,7 +6,7 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:52:16 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 17:23:00 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/10/27 12:43:31 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*c;
 	size_t	k;
 
-	*c = s;
+	*c = (char *)s;
 	k = 0;
 	while (k < n)
 	{
