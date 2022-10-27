@@ -6,7 +6,7 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:37:34 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 22:40:18 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/10/27 12:15:31 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	size_t			k;
 
-	d = dest;
-	s = src;
+	d = (char *)dest;
+	s = (char *)src;
 	k = 0;
-	while (d[k] != '\0' && k < n || d[k] == s[k]) //tirar? "d[k] != '\0'"??
+	while (k < n || d[k] == s[k])
 	{
 		d[k] = s[k];
 		k++;
