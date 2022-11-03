@@ -6,20 +6,18 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:52:16 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/27 12:43:31 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:53:25 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	char	*c;
 	size_t	k;
 
-	*c = (char *)s;
+	c = (char *)s;
 	k = 0;
 	while (k < n)
 	{

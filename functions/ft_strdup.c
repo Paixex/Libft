@@ -6,11 +6,11 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:19:25 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/30 18:19:42 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:28:33 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft:h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

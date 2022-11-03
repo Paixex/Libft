@@ -6,14 +6,13 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:17:17 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/26 17:08:06 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/03 13:45:13 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-char	*strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	slen;
 
@@ -24,15 +23,15 @@ char	*strrchr(char *s, int c)
 	}
 	while (s[slen])
 	{
-		if (s[slen] == (char *)c)
+		if (s[slen] == (unsigned char)c)
 		{
-			return ((char *)(c + k));
+			return ((char *)(s));
 		}
 		slen--;
 	}
-	if (s[slen] == (char)c)
+	if (s[slen] == (unsigned char)c)
 	{
-		return ((char *)(s + k));
+		return ((char *)(s));
 	}
 	return (NULL);
 }

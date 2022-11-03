@@ -6,13 +6,11 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:41:18 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/10/27 22:45:50 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:52:33 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
