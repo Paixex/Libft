@@ -6,7 +6,7 @@
 #    By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 11:36:41 by digil-pa          #+#    #+#              #
-#    Updated: 2022/11/03 12:58:37 by digil-pa         ###   ########.fr        #
+#    Updated: 2022/11/04 17:16:00 by digil-pa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRC = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr\
 ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
 ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
 ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
+ft_substr ft_strjoin ft_strtrim\
 
 
 

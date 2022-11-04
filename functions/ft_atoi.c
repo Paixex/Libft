@@ -6,7 +6,7 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:10:55 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/03 12:53:29 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:56:06 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 	if (str[k] == '+' || str[k] == '-')
 	{
 		if (str[k] == '-')
-			num *= -1;
+			sinal *= -1;
 		k++;
 	}
 	while (str[k] >= '0' && str[k] <= '9')

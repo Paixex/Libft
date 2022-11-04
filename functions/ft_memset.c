@@ -6,11 +6,13 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:12:48 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/03 13:03:16 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/04 14:14:02 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -19,11 +21,9 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	j = (unsigned char *)s;
 	k = 0;
-	if (!j[k])
-		return (NULL);
 	while (k != n)
 	{
-		j[k] = c;
+		((unsigned char *)j)[k] = c;
 		k++;
 	}
 	return (s);

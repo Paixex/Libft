@@ -6,7 +6,7 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:17:17 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/03 13:45:13 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:57:43 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,13 @@ char	*ft_strrchr(const char *s, int c)
 	int	slen;
 
 	slen = ft_strlen(s);
-	if (!s)
-	{
-		return (NULL);
-	}
-	while (s[slen])
+	while (slen >= 0)
 	{
 		if (s[slen] == (unsigned char)c)
 		{
-			return ((char *)(s));
+			return (&((char *)s)[slen]);
 		}
 		slen--;
-	}
-	if (s[slen] == (unsigned char)c)
-	{
-		return ((char *)(s));
 	}
 	return (NULL);
 }
