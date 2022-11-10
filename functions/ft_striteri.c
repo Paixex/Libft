@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:51:08 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/10 14:53:12 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/11/10 13:57:48 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/11/10 14:06:43 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	
+	unsigned int	k;
+
+	k = 0;
+	if (!s || !f)
+		return ;
+	while (s[k])
+	{
+		f(k, &s[k]);
+		k++;
+	}
 }

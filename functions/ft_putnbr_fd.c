@@ -6,7 +6,7 @@
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 08:28:17 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/10 08:46:55 by digil-pa         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:59:57 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	k;
-
-	if (n < 0)
+	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
-		k = (unsigned int)(n * -1);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
-		k = (unsigned int)n;
-	if (k >= 10)
-		ft_putnbr_fd(k / 10, fd);
-	ft_putchar_fd((char)(k % 10 + 48), fd);
+		ft_putchar_fd(n + '0', fd);
 }

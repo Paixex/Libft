@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:51:08 by digil-pa          #+#    #+#             */
-/*   Updated: 2022/11/10 14:53:12 by digil-pa         ###   ########.fr       */
+/*   Created: 2022/11/10 12:09:41 by digil-pa          #+#    #+#             */
+/*   Updated: 2022/11/10 12:17:35 by digil-pa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	
+	int	k;
+
+	k = 0;
+	while (s[k] != '\0')
+	{
+		write(fd, &s[k], 1);
+		k++;
+	}
 }
