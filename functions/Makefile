@@ -6,7 +6,7 @@
 #    By: digil-pa <digil-pa@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 11:36:41 by digil-pa          #+#    #+#              #
-#    Updated: 2022/11/17 22:02:32 by digil-pa         ###   ########.fr        #
+#    Updated: 2022/11/18 13:25:44 by digil-pa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ BONUS = ft_lstnew			\
 		ft_lstdelone		\
 		ft_lstclear			\
 		ft_lstiter			\
-
+		ft_lstmap			\
+		
 CC =gcc
 RM =rm -f
 CFLAGS = -Wall -Werror -Wextra -I.
